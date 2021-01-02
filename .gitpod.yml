@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - command: |
+      echo -e "[default]\naws_access_key_id = $DDBH_AWS_ACCESS_ID\naws_secret_access_key = $DDBH_AWS_SECRET_KEY\n" >> ~/.aws/credentials
+      echo -e "[default]\nregion = us-east-1\noutput = json\n" >> ~/.aws/config
+vscode:
+  extensions:
+    - code-ninja.devsync@0.0.1:3b533bb2617b5584cd7b5e1521fb8a71
